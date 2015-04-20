@@ -1,0 +1,36 @@
+﻿<Window x:Class="RealSense.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="760" Width="1024">
+    <Grid Margin="0,0,0.4,-0.2">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="imgColorStream" Margin="163,77,166.6,291.4" RenderTransformOrigin="0.502,0.474" Stretch="Fill"/>
+        <Label x:Name="lblMessage" Content="(Wave Your Hand!)" Margin="179,-64,434.6,766.4" VerticalAlignment="Bottom" HorizontalAlignment="Center" RenderTransformOrigin="0.552,13.191" Width="404" Height="28"/>
+        <Label x:Name="lblFacesDetected" Content="Faces Detected: 0" HorizontalAlignment="Left" Margin="40,462,0,236.4" Width="171"/>
+        <Label x:Name="lblLEyeClosedIntensity" Content="Left Eye Closed Intensity: 0" HorizontalAlignment="Left" Margin="40,494,0,203.4" Width="171"/>
+        <Label x:Name="lblLEyeClosed" Content="Left Eye Closed: No" HorizontalAlignment="Left" Margin="40,527,0,171.4" Width="171"/>
+        <Label x:Name="lblREyeClosedIntensity" Content="Right Eye Closed Intensity: 0" Margin="40,559,806.6,129.4" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="lblREyeClosed" Content="Right Eye Closed: Yes" Margin="40,593,829.6,106.4" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="lblEmotion" Content="Emotion: ?" Margin="40,624,829.6,74.4" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="lblEmotionEvidence" Margin="40,656,829.6,42.4" RenderTransformOrigin="0.5,0.5" Content="Emotion Evidence: "/>
+        <Label x:Name="lblBlink" Content="Blink Detected: No" Margin="40,688,829.6,11.4" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="lblFPS" Content="FPS: 0" Margin="0,444,344.6,259.4" RenderTransformOrigin="0.5,0.5" Height="27" HorizontalAlignment="Right" Width="236"/>
+        <ComboBox IsEditable="True" IsReadOnly="True" Text="Select Expression to Inspect Live" x:Name="cbExprSelect" Height="24" Margin="366,480,385.6,0" VerticalAlignment="Top" SelectionChanged="cbExprSelect_SelectionChanged"/>
+        <Label x:Name="lblExprIntensity" Content="Expression Intensity: 0" HorizontalAlignment="Left" Margin="366,511,0,180.4" Width="269"/>
+        <Label x:Name="lblBoundingRect" Content="Bounding Rect: " HorizontalAlignment="Left" Height="24" Margin="366,577,0,0" VerticalAlignment="Top" Width="485"/>
+        <Label x:Name="lblAverageDepth" Content="Average Depth: " HorizontalAlignment="Left" Height="24" Margin="366,606,0,0" VerticalAlignment="Top" Width="181"/>
+        <Label x:Name="lblPoseEulerAngles" Content="Pose Euler Angles: " HorizontalAlignment="Left" Height="46" Margin="632,610,0,0" VerticalAlignment="Top" Width="368"/>
+        <ScrollViewer Margin="371,633,395.6,0" VerticalAlignment="Top" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="textBlockLandmarkPoints" TextWrapping="Wrap" Text="TextBlock" />
+
+        </ScrollViewer>
+        <ComboBox x:Name="cbCameraMode" IsEditable="True" IsReadOnly="True" Text="Select Camera Mode" HorizontalAlignment="Left" Height="26" Margin="373,10,0,0" VerticalAlignment="Top" Width="255" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Label x:Name="lblPoseQuaternionAngles" Content="Pose Euler Angles: " HorizontalAlignment="Left" Height="46" Margin="632,661,0,0" VerticalAlignment="Top" Width="368"/>
+
+    </Grid>
+</Window>
