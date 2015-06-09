@@ -162,13 +162,10 @@ namespace RealSense
             dirToCreateFull = System.IO.Path.GetFullPath(dirToCreate);
             Directory.CreateDirectory(dirToCreateFull);
 
+            //create the csv file to write to
+            file = new StreamWriter("data/" + currentDateTime + "data" + ".csv");
 
            
-
-            //create file and make the name as the current time including msecs
-            string path = "data/" + currentDateTime + BLINK_FILE_NAME;
-            string fullpath = System.IO.Path.GetFullPath(path);
-            file = new System.IO.StreamWriter(@path, true);
 
             //initialise global expressions array - faster to add the keys here?
             var enumListMain = Enum.GetNames(typeof(PXCMFaceData.ExpressionsData.FaceExpression));
@@ -250,7 +247,6 @@ namespace RealSense
             
             //capture samples
             senseManager.captureManager.SetFileName("video/" + currentDateTime + ".raw", true);
-
             //Enable color stream
             senseManager.EnableStream(PXCMCapture.StreamType.STREAM_TYPE_COLOR, STREAM_WIDTH, STREAM_HEIGHT, STREAM_FPS);
             senseManager.EnableStream(PXCMCapture.StreamType.STREAM_TYPE_DEPTH, STREAM_WIDTH, STREAM_HEIGHT, STREAM_FPS);
@@ -373,7 +369,7 @@ namespace RealSense
                 if (firstFrame == true)
                 {
                     firstFrame = false;
-                    pipeClient.SendMessage(CAMERA_CONNECTED_MESSAGE);
+                    //pipeClient.SendMessage(CAMERA_CONNECTED_MESSAGE);
                 }
 
                 //Get sample from the sensemanager to convert to bitmap and show
@@ -398,7 +394,7 @@ namespace RealSense
                 // Retrieve hand and face data AND EMOTION DATA
                 hand = senseManager.QueryHand();
                 face = senseManager.QueryFace();
-                //emotion = senseManager.QueryEmotion();
+                emotion = senseManager.QueryEmotion();
 
                 //Process hand data 
                 if (hand != null)
@@ -464,7 +460,7 @@ namespace RealSense
                         {
                             //get scores and intensities for right and left eye closing - 22 possible expressions --> put into hashtable
                             PXCMFaceData.ExpressionsData.FaceExpressionResult score;
-
+                            
                             //this gets a list of enum names as strings
                             var enumNames = Enum.GetNames(typeof(PXCMFaceData.ExpressionsData.FaceExpression));
                             //for all enumnames, calculate the 
@@ -517,7 +513,7 @@ namespace RealSense
                     }
 
                 }
-                /*
+                
                 if (emotion != null)
                 {
                     int numFaces = emotion.QueryNumFaces();
@@ -546,12 +542,16 @@ namespace RealSense
 
                         }
 
-                        currentEmotion = arrData[idx_outstanding_emotion].emotion;
+                        currentEmotion = arrData[idx_outstanding_emotion].eid;
+                        //Console.WriteLine(currentEmotion.ToString());
                         emotionEvidence = max_evidence;
+
+                       // Console.WriteLine(currentEmotion.ToString() + ":" + emotionEvidence.ToString());
+                        
 
                     }
                 }
-                */
+                
 
                 // Update the user interface
                 UpdateUI(colorBitmap);
@@ -674,46 +674,49 @@ namespace RealSense
                     if (quaternionAngles != null)
                         lblPoseQuaternionAngles.Content = "QUATERNION ANGLES" + Environment.NewLine + "W: " + quaternionAngles.w + " X: " + quaternionAngles.x + " Y: " + quaternionAngles.y + " Z: " + quaternionAngles.z;
                   
-                    /*
+                    
                     //Process Emotion:
                     lblEmotionEvidence.Content = "Emotion Evidence: " + emotionEvidence;
                     switch (currentEmotion)
                     {
 
                         case PXCMEmotion.Emotion.EMOTION_PRIMARY_ANGER:
-                            lblEmotion.Content = "Anger";
+                            lblEmotion.Content = "Emotion: Anger";
                             break;
                         case PXCMEmotion.Emotion.EMOTION_PRIMARY_CONTEMPT:
-                            lblEmotion.Content = "Contempt";
+                            lblEmotion.Content = "Emotion: Contempt";
                             break;
                         case PXCMEmotion.Emotion.EMOTION_PRIMARY_DISGUST:
-                            lblEmotion.Content = "Disgust";
+                            lblEmotion.Content = "Emotion: Disgust";
                             break;
                         case PXCMEmotion.Emotion.EMOTION_PRIMARY_FEAR:
-                            lblEmotion.Content = "Fear";
+                            lblEmotion.Content = "Emotion: Fear";
                             break;
                         case PXCMEmotion.Emotion.EMOTION_PRIMARY_JOY:
-                            lblEmotion.Content = "Joy";
+                            lblEmotion.Content = "Emotion: Joy";
                             break;
                         case PXCMEmotion.Emotion.EMOTION_PRIMARY_SADNESS:
-                            lblEmotion.Content = "Sadness";
+                            lblEmotion.Content = "Emotion: Sadness";
                             break;
                         case PXCMEmotion.Emotion.EMOTION_PRIMARY_SURPRISE:
-                            lblEmotion.Content = "Surprise";
+                            lblEmotion.Content = "Emotion: Surprise";
                             break;
                         case PXCMEmotion.Emotion.EMOTION_SENTIMENT_NEGATIVE :
-                            lblEmotion.Content = "Negative Sentiment";
+                            lblEmotion.Content = "Emotion: Negative Sentiment";
                             break;
                         case PXCMEmotion.Emotion.EMOTION_SENTIMENT_NEUTRAL:
-                            lblEmotion.Content = "Neutral Sentiment";
+                            lblEmotion.Content = "Emotion: Neutral Sentiment";
                             break;
                         case PXCMEmotion.Emotion.EMOTION_SENTIMENT_POSITIVE:
-                            lblEmotion.Content = "Positive Sentiment";
+                            lblEmotion.Content = "Emotion: Positive Sentiment";
+                            break;
+                        default:
+                            lblEmotion.Content = "Emotion: ?";
                             break;
 
 
                     }
-                     */
+                     
 
 
                     // Reset the screen messages after their globally defined no. of frames
@@ -838,10 +841,14 @@ namespace RealSense
             toWrite += "," + iAverageDepth;
 
             // add all landmarkpoints data
-            for (int i = 0; i < iLandmarkPoints.Length; i++)
+            if (iLandmarkPoints != null)
             {
-                toWrite += "," + iLandmarkPoints[i].image.x + "," + iLandmarkPoints[i].image.y;
+                for (int i = 0; i < iLandmarkPoints.Length; i++)
+                {
+                    toWrite += "," + iLandmarkPoints[i].image.x + "," + iLandmarkPoints[i].image.y;
+                }
             }
+            
 
 
             //add euler angles
