@@ -1,0 +1,35 @@
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\RealSense.exe.config
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\MainWindow.baml
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\MainWindow.g.cs
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\App.g.cs
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense_MarkupCompile.cache
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.g.resources
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.Properties.Resources.resources
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.csproj.GenerateResource.Cache
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.csprojResolveAssemblyReference.cache
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense_Content.g.cs
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\libpxccpp2c.dll
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\RealSense.exe
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\RealSense.pdb
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\libpxcclr.cs.dll
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.exe
+D:\ASTAR INTERNSHIP\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.pdb
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\RealSense.exe.config
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.exe
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.pdb
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\libpxccpp2c.dll
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\RealSense.exe
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\RealSense.pdb
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\libpxcclr.cs.dll
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.csprojResolveAssemblyReference.cache
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\MainWindow.baml
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\MainWindow.g.cs
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\App.g.cs
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense_Content.g.cs
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense_MarkupCompile.cache
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.g.resources
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.Properties.Resources.resources
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\obj\Debug\RealSense.csproj.GenerateResource.Cache
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\NamedPipeWrapper.dll
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\NamedPipeWrapper.pdb
+D:\ASTAR INTERNSHIP\EDF-IntelRealSense-CSV Project\Intel RealSense Visual Studio Project\Intel RealSense Solution\RealSense\bin\Debug\NamedPipeWrapper.xml
