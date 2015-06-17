@@ -243,7 +243,14 @@ namespace RealSense
 
             // Instantiate and initialize the SenseManager
             senseManager = PXCMSenseManager.CreateInstance();
+            if (senseManager == null)
+            {
+                MessageBox.Show("Cannot initialise sense manager: closing in 20s, report to Sriram");
+                Thread.Sleep(20000);
+                Environment.Exit(1);
+            }
             
+
             
             //capture samples
             senseManager.captureManager.SetFileName("video/" + currentDateTime + ".raw", true);
@@ -311,10 +318,7 @@ namespace RealSense
             pipeClient.Stop();
             senseManager.Dispose();
             file.Close();
-
-           
-          
-
+            
         }
 
         protected override void OnClosed(EventArgs e)
